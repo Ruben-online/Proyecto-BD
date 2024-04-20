@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- titulo de la ventana -->
+    <title>Nosotros</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="assets/css/Navbar.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">Auditora Gibel</a>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+            <a href="sistema/index.php" class="action_btn">Ingresar</a>
+            <!-- Menu hamburguesa -->
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <!-- Menu Responsive -->
+        <div class="dropdown_menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+            <a href="sistema/index.php" class="action_btn">Ingresar</a>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h1>Nosotros</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br/> Dicta cupiditate dolorum corrupti quos earum similique minus nemo molestiae repellat molestias facere, vel laboriosam ullam. Fuga cupiditate tempore eum aliquam! Fuga?</p>
+        </section>
+    </main>
+
+    <!-- Javascript -->
+    <script>
+        const toogleBtn = document.querySelector('.toggle_btn')
+        const toogleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toogleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toogleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>
